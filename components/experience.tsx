@@ -4,17 +4,20 @@ import { Calendar, MapPin, Users, CheckCircle } from "lucide-react"
 export default function Experience() {
   const experiences = [
     {
-      title: "Associate Engineer - System Admin",
-      company: "3i Infotech Ltd., Tamil Nadu",
-      clientProject: "Client Project - ITGI and SIDBI",
-      duration: "Feb 2025 - Present",
-      responsibilities: [
-        "Hardware Troubleshooting and Repair: PC and Laptop Diagnostics and Repair, Hardware Upgrades",
-        "Software Installation and Configuration: Application Deployment, Software Licensing Management",
-        "Network Management and Troubleshooting: TCP/IP, DNS, DHCP, VPN Configuration",
-        "Active Directory Management: User Account Creation and Management, Group Policy Configuration",
-        "Microsoft Office 365 Administration: Outlook Configuration and Troubleshooting",
-      ],
+      title: "Associate Engineer – System Admin",
+      company: "3i-Infotech Pvt Ltd",
+      payrollVendor: "Payroll Vendor: 3i-Infotech Pvt Ltd",
+      duration: "Feb 2025 - Oct 2025",
+      clientProject: "Client Projects: ITGI & SIDBI",
+      description: "Delivered system administration and IT support services for enterprise clients ITGI & SIDBI. Resolved hardware, software, OS, and basic network issues across desktops and laptops. Managed Windows OS, Active Directory users, Outlook, Office 365, and endpoint security. Performed backup and restore operations, printer support, and technical documentation. Provided remote and onsite support using RDP, AnyDesk, and TightVNC.",
+    },
+    {
+      title: "Associate Engineer – System Admin",
+      company: "Tricornio Technologies",
+      payrollVendor: "Payroll Vendor: Tricornio Technologies",
+      duration: "Nov 2025 – Present",
+      clientProject: "Client Projects: ITGI & SIDBI",
+      description: "Delivered system administration and IT support services for enterprise clients ITGI & SIDBI. Resolved hardware, software, OS, and basic network issues across desktops and laptops. Managed Windows OS, Active Directory users, Outlook, Office 365, and endpoint security. Performed backup and restore operations, printer support, and technical documentation. Provided remote and onsite support using RDP, AnyDesk, and TightVNC.",
     },
   ]
 
@@ -32,25 +35,20 @@ export default function Experience() {
                 <MapPin className="w-4 h-4" />
                 <span>{exp.company}</span>
               </div>
-              <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400">
-                <Users className="w-4 h-4" />
-                <span className="font-medium">{exp.clientProject}</span>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                <span>{exp.payrollVendor}</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                 <Calendar className="w-4 h-4" />
                 <span>{exp.duration}</span>
               </div>
+              <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 mt-2">
+                <Users className="w-4 h-4" />
+                <span className="font-medium">{exp.clientProject}</span>
+              </div>
             </CardHeader>
             <CardContent>
-              <h4 className="font-semibold mb-4">Key Responsibilities:</h4>
-              <ul className="space-y-3">
-                {exp.responsibilities.map((responsibility, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600 dark:text-gray-300">{responsibility}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{exp.description}</p>
             </CardContent>
           </Card>
         ))}

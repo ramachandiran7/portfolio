@@ -45,6 +45,12 @@ export default function Certifications() {
       icon: GitBranch,
       description: "DevOps practices and CI/CD pipeline implementation",
     },
+    {
+      title: "DevOps with Multi-Cloud Training",
+      issuer: "SRTechOps (6 Months)",
+      icon: Cloud,
+      description: "Comprehensive DevOps training with multi-cloud infrastructure management and deployment strategies",
+    },
   ]
 
   return (
